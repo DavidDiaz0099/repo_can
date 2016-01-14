@@ -11,9 +11,13 @@
 
 void application()
 {
-	if ((acteng_msb == 0) && (acteng_lsb == 1)) {//velocimetro
+	
+	//SIU.GPDO[0].B.PDO = 1;
+	//SIU.GPDO[5].B.PDO = 1;
+	
+/*if ((acteng_msb == 0) && (acteng_lsb == 1)) {//velocimetro
 		         SIU.GPDO[69].B.PDO = 0; //DEJA PRENDIDO LED1 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MSG		
-		         SIU.GPDO[6].B.PDO = 1;
+		         SIU.GPDO[0].B.PDO = 1;
 	}
 	
 	if (Increase_ACK == 2){  //odometro
@@ -38,7 +42,7 @@ void application()
 	}
 	
 	if (High_Beams_Status==8){
-				SIU.GPDO[0].B.PDO = 1; //DEJA PRENDIDO LED1 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MSG	
+				SIU.GPDO[6].B.PDO = 1; //DEJA PRENDIDO LED1 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MSG	
 	}
 	
 	if (HandBrake_Status==9){
@@ -58,7 +62,7 @@ void application()
 	
 	}
 
-
+*/
 
 }
 	

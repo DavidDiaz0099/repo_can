@@ -58,6 +58,19 @@ uint8_t Seatbelt_Status; //B0
 uint8_t Ign_Status;     //B0
 uint8_t Gearbox_Status; //B0
 
+uint8_t Directional_Status;
+uint8_t Temp_high_Status;
+
+uint8_t Gas_low_Status;
+uint8_t Oil_low_Status;
+uint8_t High_beams_Status;
+uint8_t Hand_break_Status;
+uint8_t Battery_low_Status; 
+uint8_t Door_open_Status;
+uint8_t Seatbeltn_Status;
+uint8_t Direction_left_Status;
+uint8_t Direction_right_Status;
+
 /*~E*/
 /*~A*/
 /*~+:Private Operations*/
@@ -74,6 +87,23 @@ CAN_MessageDataType Indicators_Message;
 CAN_MessageDataType Seatbelt_Message;
 CAN_MessageDataType Ign_Message;
 CAN_MessageDataType Gearbox_Message;
+CAN_MessageDataType Directional_Message;
+CAN_MessageDataType Temp_high_Message;
+CAN_MessageDataType Gal_low_Message;
+CAN_MessageDataType Oil_low_Message;
+
+CAN_MessageDataType Temp_high_Message;
+CAN_MessageDataType Gas_low_Message;
+CAN_MessageDataType Oil_low_Message;
+CAN_MessageDataType High_beams_Message;
+CAN_MessageDataType Hand_break_Message;
+CAN_MessageDataType Battery_low_Message;
+CAN_MessageDataType Door_open_Message;
+CAN_MessageDataType Seatbeltn_Message;
+CAN_MessageDataType Direction_left_Message;
+CAN_MessageDataType Direction_right_Message;
+
+
 
 CAN_MessageDataType CanMessage_PduHandler7;
 uint8_t msg_rx_pdu0 = 0;
@@ -92,6 +122,7 @@ void Veh_Speed(CAN_MessageDataType CanMessage0)
 	acteng_lsb = Can_Vel_Message.msg_data_field[1]; //
 	if ((acteng_msb == 0) && (acteng_lsb == 1))
 		SIU.GPDO[68].B.PDO = 0; //DEJA PRENDIDO LED1 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MSG	
+	   // SIU.GPDO[0].B.PDO = 1;
 	//msg_rx_pdu0 = 1;
     //PduHandlerCnt0++;
 	//return (acteng_msb,acteng_lsb);
@@ -100,22 +131,24 @@ void Veh_Speed(CAN_MessageDataType CanMessage0)
 void Odometer(CAN_MessageDataType CanMessage1)
 {
 	//SIU.GPDO[69].B.PDO = 1; //DEJA PRENDIDO PIN1 PUERTO A COMO INDICADOR DE QUE SE RECIVIO EL ID
+	
 	Can_Odo_Message = CanMessage1; //  se recive CanMeessage uqe es el parametro de entrada de la funcion y se cambia por  canmessage put handler
 		//pdu_handler7.can_mb_nr = 7;
 		//pdu_handler7.can_dlc = Can_Odo_Message.msg_dlc_field;
 		//pdu_handler7.can_sdu = Can_Odo_Message.msg_data_field;
 	   Increase_ACK = 0;
 	   Odometer_Value = 0;
-		Increase_ACK = Can_Odo_Message.msg_data_field[0]; //
+	   Increase_ACK = Can_Odo_Message.msg_data_field[0]; //
 		Odometer_Value = Can_Odo_Message.msg_data_field[1]; //
-		//if ((Increase_ACK == 2) &&  (Odometer_Value== 3))
-		//SIU.GPDO[69].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MENSAJE	
+	  //  if ((Increase_ACK == 2) && (Odometer_Value == 3)) 
+	   // 	SIU.GPDO[1].B.PDO = 1; 
+		                             //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL MENSAJE	
 		//msg_rx_pdu0 = 1;
 	    //PduHandlerCnt0++;
 		//return (Increase_ACK, Odometer_Value);
 }
 
-void Fuel_Tank (CAN_MessageDataType CanMessage2) //UNICO Q JALA
+void Fuel_Tank (CAN_MessageDataType CanMessage2) 
 {
 	//SIU.GPDO[69].B.PDO = 1; //DEJA PRENDIDO PIN1 PUERTO A COMO INDICADOR DE QUE SE RECIVIO EL ID
 	Can_Fuel_Message = CanMessage2; //  se recive CanMeessage uqe es el parametro de entrada de la funcion y se cambia por  canmessage put handler
@@ -130,19 +163,19 @@ void Fuel_Tank (CAN_MessageDataType CanMessage2) //UNICO Q JALA
 			TNK_LSB = Can_Fuel_Message.msg_data_field[1]; //
 			GAS_Status = Can_Fuel_Message.msg_data_field[2]; //
 			
-			//if ((TNK_MSB == 4) &&  (TNK_LSB== 5) && (GAS_Status== 6))
-			//	SIU.GPDO[70].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
+			//if (TNK_MSB == 4) 
+			 // SIU.GPDO[2].B.PDO = 1; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
 		//msg_rx_pdu0 = 1;
 		//PduHandlerCnt0++;
 }
 
 void  Door_Status_Indicator(CAN_MessageDataType CanMessage3)
 {
-	//SIU.GPDO[69].B.PDO = 1; //DEJA PRENDIDO PIN1 PUERTO A COMO INDICADOR DE QUE SE RECIVIO EL ID
+	
 		Indicators_Message = CanMessage3; //  se recive CanMeessage uqe es el parametro de entrada de la funcion y se cambia por  canmessage put handler
-				//pdu_handler7.can_mb_nr = 7;
+				pdu_handler7.can_mb_nr = 7;
 				//pdu_handler7.can_dlc = Indicators_Message.msg_dlc_field;
-				//pdu_handler7.can_sdu = Indicators_Message.msg_data_field;
+				//pdu_handle.can_sdu = Indicators_Message.msg_data_field;
 		        Door_Status = 0;
 		        High_Beams_Status = 0;
 		        HandBrake_Status  = 0;
@@ -152,7 +185,7 @@ void  Door_Status_Indicator(CAN_MessageDataType CanMessage3)
 				HandBrake_Status = Indicators_Message.msg_data_field[2]; //
 				
 				//if ((Door_Status == 7) &&  (High_Beams_Status== 8) && (HandBrake_Status == 9))
-				//	SIU.GPDO[71].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
+					  //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
 			//msg_rx_pdu0 = 1;
 			//PduHandlerCnt0++;	
 }
@@ -167,8 +200,8 @@ void Seatbelt_Indicator(CAN_MessageDataType CanMessage4)
 	            Seatbelt_Status=0;
 				Seatbelt_Status = Seatbelt_Message.msg_data_field[0]; //
 				
-				//if (Seatbelt_Status == 10)
-				 //SIU.GPDO[1].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
+			//	if (Seatbelt_Status == 10)
+			//	 SIU.GPDO[4].B.PDO = 1; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
 				//msg_rx_pdu0 = 1;
 				//PduHandlerCnt0++;
 }
@@ -183,8 +216,8 @@ void Ignition_Status(CAN_MessageDataType CanMessage5)
 						
 						Ign_Status = Ign_Message.msg_data_field[0]; //
 					
-					//if (Ign_Status == 11)
-							SIU.GPDO[2].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
+				//	if (Ign_Status == 11)
+					//	SIU.GPDO[5].B.PDO = 1; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
 					//msg_rx_pdu0 = 1;
 					//PduHandlerCnt0++;
 } 
@@ -199,32 +232,132 @@ void Control_Shift(CAN_MessageDataType CanMessage6)
 							
 							Gearbox_Status = Gearbox_Message.msg_data_field[0]; //
 						
-					//	if ( Gearbox_Status== 12)
-						//	SIU.GPDO[3].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
+					//if ( Gearbox_Status== 12)
+						//	SIU.GPDO[6].B.PDO = 1; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID	
 						//msg_rx_pdu0 = 1;
 						//PduHandlerCnt0++;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+void Directionals(CAN_MessageDataType CanMessage7)
+{
+	Directional_Message = CanMessage7;
+	
+	Directional_Status = Directional_Message.msg_data_field[0]; 
+	
+	if ( Directional_Status== 13)
+	  SIU.GPDO[69].B.PDO = 1;
+     // SIU.GPDO[9].B.PDO = 1;
+}
+
+void Temp_high(CAN_MessageDataType CanMessage8)
+{
+	Temp_high_Message = CanMessage8;
+	
+	Temp_high_Status = Temp_high_Message.msg_data_field[0]; 
+	
+	if (Temp_high_Status == 14)
+	  SIU.GPDO[5].B.PDO = 1;
+}
+
+void Gas_low(CAN_MessageDataType CanMessage9)
+{
+	Gas_low_Message = CanMessage9;
+	
+	Gas_low_Status = Gal_low_Message.msg_data_field[0]; 
+	
+	if (Gas_low_Status== 15)
+	  SIU.GPDO[3].B.PDO = 1;
+}
+
+void Oil_low(CAN_MessageDataType CanMessage10)
+{
+	Oil_low_Message = CanMessage10;
+	
+	Oil_low_Status = Oil_low_Message.msg_data_field[0]; 
+	
+	if (Oil_low_Status== 16)
+	  SIU.GPDO[7].B.PDO = 1;
+}
+
+
+void High_beams(CAN_MessageDataType CanMessage11)
+{
+	High_beams_Message = CanMessage11;
+	
+	High_beams_Status = High_beams_Message.msg_data_field[0]; 
+	
+	if (High_beams_Status == 17)
+	  SIU.GPDO[6].B.PDO = 1;
+}
+
+void Hand_break(CAN_MessageDataType CanMessage12)
+{
+	Hand_break_Message = CanMessage12;
+	
+	Hand_break_Status = Hand_break_Message.msg_data_field[0]; 
+	
+	if (Hand_break_Status == 18)
+	  SIU.GPDO[4].B.PDO = 1;
+}
+
+void Battery_low(CAN_MessageDataType CanMessage13)
+{
+	Battery_low_Message = CanMessage13;
+	
+	Battery_low_Status = Battery_low_Message.msg_data_field[0]; 
+	
+	if (Battery_low_Status == 19)
+	  SIU.GPDO[0].B.PDO = 1;
+}
+
+void Door_open(CAN_MessageDataType CanMessage14)
+{
+	Door_open_Message = CanMessage14;
+	
+	Door_open_Status = Door_open_Message.msg_data_field[0]; 
+	
+	if (Door_open_Status == 20)
+	  SIU.GPDO[1].B.PDO = 1;
+}
+
+void Seatbelt(CAN_MessageDataType CanMessage15)
+{
+	Seatbeltn_Message = CanMessage15;
+	
+	Seatbeltn_Status = Seatbelt_Message.msg_data_field[0]; 
+	
+	if (Seatbeltn_Status == 21)
+	  SIU.GPDO[2].B.PDO = 1;
+}
+
+void Direction_left(CAN_MessageDataType CanMessage16)
+{
+	Direction_left_Message = CanMessage16;
+	
+	Direction_left_Status = Direction_left_Message.msg_data_field[0]; 
+	
+	if (Direction_left_Status== 22)
+	  SIU.GPDO[8].B.PDO = 1;
+}
+
+
+void Direction_right(CAN_MessageDataType CanMessage17)
+{
+	Direction_right_Message = CanMessage17;
+	
+	Direction_right_Status = Direction_right_Message.msg_data_field[0]; 
+	
+	if (Direction_right_Status== 23)
+	 SIU.GPDO[9].B.PDO = 1;
+}
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-void Can_Manager_PduHandler7(CAN_MessageDataType CanMessage)
-{
-	
-	/*SIU.GPDO[69].B.PDO = 0; //DEJA PRENDIDO LED2 DE LA TARJETA COMO INDICADOR DE QUE SE RECIVIO EL ID
-	CanMessage_PduHandler7 = CanMessage;
-	msg_rx_pdu7 = 1;
-	pdu_handler8_cnt++;
-	dummy_msg8[0]++;
-	if (256 == pdu_handler8_cnt)
-	{
-		pdu_handler8_cnt = 0;
-		dummy_msg8[0] = 0;
-		dummy_msg8[1]++;
-	}
-	PduHandlerCnt6++; */
-}
 
 /*~E*/
 /*~A*/

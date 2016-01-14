@@ -64,6 +64,8 @@ Link map of __startup
          8] GAS_Status (object,global) found in Can_Manager_c.obj 
         7] Door_Status_Indicator (func,global) found in Can_Manager_c.obj 
          8] Indicators_Message (object,global) found in Can_Manager_c.obj 
+         8] pdu_handler7 (object,global) found in Can_Manager_c.obj 
+          9] dummy_msg2 (object,global) found in Can_Manager_c.obj 
          8] Door_Status (object,global) found in Can_Manager_c.obj 
          8] High_Beams_Status (object,global) found in Can_Manager_c.obj 
          8] HandBrake_Status (object,global) found in Can_Manager_c.obj 
@@ -76,7 +78,40 @@ Link map of __startup
         7] Control_Shift (func,global) found in Can_Manager_c.obj 
          8] Gearbox_Message (object,global) found in Can_Manager_c.obj 
          8] Gearbox_Status (object,global) found in Can_Manager_c.obj 
-        7] Can_Manager_PduHandler7 (func,global) found in Can_Manager_c.obj 
+        7] Directionals (func,global) found in Can_Manager_c.obj 
+         8] Directional_Message (object,global) found in Can_Manager_c.obj 
+         8] Directional_Status (object,global) found in Can_Manager_c.obj 
+        7] Temp_high (func,global) found in Can_Manager_c.obj 
+         8] Temp_high_Message (object,global) found in Can_Manager_c.obj 
+         8] Temp_high_Status (object,global) found in Can_Manager_c.obj 
+        7] Gas_low (func,global) found in Can_Manager_c.obj 
+         8] Gas_low_Message (object,global) found in Can_Manager_c.obj 
+         8] Gal_low_Message (object,global) found in Can_Manager_c.obj 
+         8] Gas_low_Status (object,global) found in Can_Manager_c.obj 
+        7] Oil_low (func,global) found in Can_Manager_c.obj 
+         8] Oil_low_Message (object,global) found in Can_Manager_c.obj 
+         8] Oil_low_Status (object,global) found in Can_Manager_c.obj 
+        7] High_beams (func,global) found in Can_Manager_c.obj 
+         8] High_beams_Message (object,global) found in Can_Manager_c.obj 
+         8] High_beams_Status (object,global) found in Can_Manager_c.obj 
+        7] Hand_break (func,global) found in Can_Manager_c.obj 
+         8] Hand_break_Message (object,global) found in Can_Manager_c.obj 
+         8] Hand_break_Status (object,global) found in Can_Manager_c.obj 
+        7] Battery_low (func,global) found in Can_Manager_c.obj 
+         8] Battery_low_Message (object,global) found in Can_Manager_c.obj 
+         8] Battery_low_Status (object,global) found in Can_Manager_c.obj 
+        7] Door_open (func,global) found in Can_Manager_c.obj 
+         8] Door_open_Message (object,global) found in Can_Manager_c.obj 
+         8] Door_open_Status (object,global) found in Can_Manager_c.obj 
+        7] Seatbelt (func,global) found in Can_Manager_c.obj 
+         8] Seatbeltn_Message (object,global) found in Can_Manager_c.obj 
+         8] Seatbeltn_Status (object,global) found in Can_Manager_c.obj 
+        7] Direction_left (func,global) found in Can_Manager_c.obj 
+         8] Direction_left_Message (object,global) found in Can_Manager_c.obj 
+         8] Direction_left_Status (object,global) found in Can_Manager_c.obj 
+        7] Direction_right (func,global) found in Can_Manager_c.obj 
+         8] Direction_right_Message (object,global) found in Can_Manager_c.obj 
+         8] Direction_right_Status (object,global) found in Can_Manager_c.obj 
      4] CAN_Initialization (func,global) found in Can_c.obj 
       5] can_config_ptr (object,global) found in Can_c.obj 
       5] can_config_dev_ptr (object,global) found in Can_c.obj 
@@ -107,9 +142,7 @@ Link map of __startup
        6] SchM_25ms_Task (func,global) found in SchM_Tasks_c.obj 
         7] CanManager_SendMessage_25ms (func,global) found in Can_Manager_c.obj 
          8] pdu_handler6 (object,global) found in Can_Manager_c.obj 
-          9] dummy_msg2 (object,global) found in Can_Manager_c.obj 
          8] msg_rx_pdu0 (object,global) found in Can_Manager_c.obj 
-         8] pdu_handler7 (object,global) found in Can_Manager_c.obj 
          8] msg_rx_pdu7 (object,global) found in Can_Manager_c.obj 
          8] pdu_handler8 (object,global) found in Can_Manager_c.obj 
           9] dummy_msg8 (object,global) found in Can_Manager_c.obj 
@@ -156,7 +189,7 @@ Link map of __startup
     3] .text (section,local) found in sysinit_c.obj 
     3] .text.35 (notype,local) found in sysinit_c.obj 
     3] .text (section,local) found in main_c.obj 
-    3] .text.73 (notype,local) found in main_c.obj 
+    3] .text.84 (notype,local) found in main_c.obj 
     3] .ivor_branch_table (section,local) found in ivor_branch_table_c.obj 
     3] .ivor_branch_table.24 (notype,local) found in ivor_branch_table_c.obj 
     3] .text (section,local) found in dummy_c.obj 
@@ -164,9 +197,9 @@ Link map of __startup
     3] .text (section,local) found in bspimain_c.obj 
     3] .text.23 (notype,local) found in bspimain_c.obj 
     3] .text (section,local) found in application_c.obj 
-    3] .text.51 (notype,local) found in application_c.obj 
+    3] .text.38 (notype,local) found in application_c.obj 
     3] .text (section,local) found in SchM_Tasks_c.obj 
-    3] .text.47 (notype,local) found in SchM_Tasks_c.obj 
+    3] .text.58 (notype,local) found in SchM_Tasks_c.obj 
     3] .text (section,local) found in SchM_c.obj 
     3] .text.80 (notype,local) found in SchM_c.obj 
     3] .text (section,local) found in PIT_c.obj 
@@ -176,7 +209,7 @@ Link map of __startup
     3] .text (section,local) found in GPIO_c.obj 
     3] .text.58 (notype,local) found in GPIO_c.obj 
     3] .text (section,local) found in Can_Manager_c.obj 
-    3] .text.100 (notype,local) found in Can_Manager_c.obj 
+    3] .text.194 (notype,local) found in Can_Manager_c.obj 
     3] .text (section,local) found in Can_c.obj 
     3] .text.256 (notype,local) found in Can_c.obj 
     3] .text (section,local) found in libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
@@ -286,7 +319,7 @@ Link map of __startup
   00000230 000000 00003230 000009c0  1 .text.35 	sysinit_c.obj 
   00000230 000052 00003230 000009c0  1 .text 	main_c.obj 
   00000230 000052 00003230 000009c0  2 main 	main_c.obj 
-  00000282 000000 00003282 00000a12  1 .text.73 	main_c.obj 
+  00000282 000000 00003282 00000a12  1 .text.84 	main_c.obj 
   00000282 0001bc 00003282 00000a12  1 .text 	dummy_c.obj 
   00000282 0001bc 00003282 00000a12  2 Test 	dummy_c.obj 
   0000043e 000000 0000343e 00000bce  1 .text.22 	dummy_c.obj 
@@ -295,83 +328,93 @@ Link map of __startup
   000004be 00002c 000034be 00000c4e  2 ReadDataDSPI_1 	bspimain_c.obj 
   000004ea 000126 000034ea 00000c7a  2 ConfigureMZC33905DSPI_1 	bspimain_c.obj 
   00000610 000000 00003610 00000da0  1 .text.23 	bspimain_c.obj 
-  00000610 000142 00003610 00000da0  1 .text 	application_c.obj 
-  00000610 000142 00003610 00000da0  2 application 	application_c.obj 
-  00000752 000000 00003752 00000ee2  1 .text.51 	application_c.obj 
-  00000752 000066 00003752 00000ee2  1 .text 	SchM_Tasks_c.obj 
-  00000752 000002 00003752 00000ee2  2 SchM_3p125ms_Task 	SchM_Tasks_c.obj 
-  00000754 000014 00003754 00000ee4  2 SchM_6p25ms_Task 	SchM_Tasks_c.obj 
-  00000768 000014 00003768 00000ef8  2 SchM_12p5ms_Task 	SchM_Tasks_c.obj 
-  0000077c 000014 0000377c 00000f0c  2 SchM_25ms_Task 	SchM_Tasks_c.obj 
-  00000790 000014 00003790 00000f20  2 SchM_50ms_Task 	SchM_Tasks_c.obj 
-  000007a4 000014 000037a4 00000f34  2 SchM_100ms_Task 	SchM_Tasks_c.obj 
-  000007b8 000000 000037b8 00000f48  1 .text.47 	SchM_Tasks_c.obj 
-  000007b8 0001be 000037b8 00000f48  1 .text 	SchM_c.obj 
-  000007b8 00006c 000037b8 00000f48  2 SchM_OsTick 	SchM_c.obj 
-  00000824 00009e 00003824 00000fb4  2 SchM_Background 	SchM_c.obj 
-  000008c2 000090 000038c2 00001052  2 SchM_Init 	SchM_c.obj 
-  00000952 000024 00003952 000010e2  2 SchM_Start 	SchM_c.obj 
+  00000610 000002 00003610 00000da0  1 .text 	application_c.obj 
+  00000610 000002 00003610 00000da0  2 application 	application_c.obj 
+  00000612 000000 00003612 00000da2  1 .text.38 	application_c.obj 
+  00000612 000066 00003612 00000da2  1 .text 	SchM_Tasks_c.obj 
+  00000612 000002 00003612 00000da2  2 SchM_3p125ms_Task 	SchM_Tasks_c.obj 
+  00000614 000014 00003614 00000da4  2 SchM_6p25ms_Task 	SchM_Tasks_c.obj 
+  00000628 000014 00003628 00000db8  2 SchM_12p5ms_Task 	SchM_Tasks_c.obj 
+  0000063c 000014 0000363c 00000dcc  2 SchM_25ms_Task 	SchM_Tasks_c.obj 
+  00000650 000014 00003650 00000de0  2 SchM_50ms_Task 	SchM_Tasks_c.obj 
+  00000664 000014 00003664 00000df4  2 SchM_100ms_Task 	SchM_Tasks_c.obj 
+  00000678 000000 00003678 00000e08  1 .text.58 	SchM_Tasks_c.obj 
+  00000678 0001be 00003678 00000e08  1 .text 	SchM_c.obj 
+  00000678 00006c 00003678 00000e08  2 SchM_OsTick 	SchM_c.obj 
+  000006e4 00009e 000036e4 00000e74  2 SchM_Background 	SchM_c.obj 
+  00000782 000090 00003782 00000f12  2 SchM_Init 	SchM_c.obj 
+  00000812 000024 00003812 00000fa2  2 SchM_Start 	SchM_c.obj 
   UNUSED   000020 ........ ........    SchM_Stop SchM_c.obj 
-  00000976 000000 00003976 00001106  1 .text.80 	SchM_c.obj 
-  00000976 0000de 00003976 00001106  1 .text 	PIT_c.obj 
-  00000976 00000a 00003976 00001106  2 PIT_device_init 	PIT_c.obj 
-  00000980 000068 00003980 00001110  2 PIT_channel_configure 	PIT_c.obj 
-  000009e8 000018 000039e8 00001178  2 PIT_channel_start 	PIT_c.obj 
+  00000836 000000 00003836 00000fc6  1 .text.80 	SchM_c.obj 
+  00000836 0000de 00003836 00000fc6  1 .text 	PIT_c.obj 
+  00000836 00000a 00003836 00000fc6  2 PIT_device_init 	PIT_c.obj 
+  00000840 000068 00003840 00000fd0  2 PIT_channel_configure 	PIT_c.obj 
+  000008a8 000018 000038a8 00001038  2 PIT_channel_start 	PIT_c.obj 
   UNUSED   000018 ........ ........    PIT_channel_stop PIT_c.obj 
-  00000a00 000054 00003a00 00001190  2 PIT_channel_0_isr 	PIT_c.obj 
-  00000a54 000000 00003a54 000011e4  1 .text.45 	PIT_c.obj 
-  00000a54 000026 00003a54 000011e4  1 .text 	MemAlloc_c.obj 
-  00000a54 00000e 00003a54 000011e4  2 MemAllocInit 	MemAlloc_c.obj 
-  00000a62 000018 00003a62 000011f2  2 MemAlloc 	MemAlloc_c.obj 
-  00000a7a 000000 00003a7a 0000120a  1 .text.29 	MemAlloc_c.obj 
-  00000a7a 000066 00003a7a 0000120a  1 .text 	IntcInterrupts_c.obj 
-  00000a7a 00002c 00003a7a 0000120a  2 INTC_InstallINTCInterruptHandler 	IntcInterrupts_c.obj 
-  00000aa6 000018 00003aa6 00001236  2 INTC_EnableInterrupts 	IntcInterrupts_c.obj 
-  00000abe 000022 00003abe 0000124e  2 INTC_InitINTCInterrupts 	IntcInterrupts_c.obj 
-  00000ae0 00021c 00003ae0 00001270  1 .text 	GPIO_c.obj 
-  00000ae0 0000d2 00003ae0 00001270  2 vfnGPIO_Init_channel 	GPIO_c.obj 
-  00000bb2 00001e 00003bb2 00001342  2 vfnGPIO_Output 	GPIO_c.obj 
+  000008c0 000054 000038c0 00001050  2 PIT_channel_0_isr 	PIT_c.obj 
+  00000914 000000 00003914 000010a4  1 .text.45 	PIT_c.obj 
+  00000914 000026 00003914 000010a4  1 .text 	MemAlloc_c.obj 
+  00000914 00000e 00003914 000010a4  2 MemAllocInit 	MemAlloc_c.obj 
+  00000922 000018 00003922 000010b2  2 MemAlloc 	MemAlloc_c.obj 
+  0000093a 000000 0000393a 000010ca  1 .text.29 	MemAlloc_c.obj 
+  0000093a 000066 0000393a 000010ca  1 .text 	IntcInterrupts_c.obj 
+  0000093a 00002c 0000393a 000010ca  2 INTC_InstallINTCInterruptHandler 	IntcInterrupts_c.obj 
+  00000966 000018 00003966 000010f6  2 INTC_EnableInterrupts 	IntcInterrupts_c.obj 
+  0000097e 000022 0000397e 0000110e  2 INTC_InitINTCInterrupts 	IntcInterrupts_c.obj 
+  000009a0 00021c 000039a0 00001130  1 .text 	GPIO_c.obj 
+  000009a0 0000d2 000039a0 00001130  2 vfnGPIO_Init_channel 	GPIO_c.obj 
+  00000a72 00001e 00003a72 00001202  2 vfnGPIO_Output 	GPIO_c.obj 
   UNUSED   000128 ........ ........    vfnGPIO_FlashMainLED GPIO_c.obj 
-  00000bd0 000080 00003bd0 00001360  2 vfnGPIO_LED_Init 	GPIO_c.obj 
-  00000c50 0000ac 00003c50 000013e0  2 GPIO_config 	GPIO_c.obj 
-  00000cfc 000000 00003cfc 0000148c  1 .text.58 	GPIO_c.obj 
-  00000cfc 00000e 00003cfc 0000148c  1 .text 	Exceptions_c.obj 
-  00000cfc 00000e 00003cfc 0000148c  2 EXCEP_InitExceptionHandlers 	Exceptions_c.obj 
-  00000d0a 0002ba 00003d0a 0000149a  1 .text 	Can_Manager_c.obj 
-  00000d0a 000064 00003d0a 0000149a  2 Veh_Speed 	Can_Manager_c.obj 
-  00000d6e 000046 00003d6e 000014fe  2 Odometer 	Can_Manager_c.obj 
-  00000db4 00005a 00003db4 00001544  2 Fuel_Tank 	Can_Manager_c.obj 
-  00000e0e 00005a 00003e0e 0000159e  2 Door_Status_Indicator 	Can_Manager_c.obj 
-  00000e68 000032 00003e68 000015f8  2 Seatbelt_Indicator 	Can_Manager_c.obj 
-  00000e9a 00003e 00003e9a 0000162a  2 Ignition_Status 	Can_Manager_c.obj 
-  00000ed8 00002c 00003ed8 00001668  2 Control_Shift 	Can_Manager_c.obj 
-  00000f04 000002 00003f04 00001694  2 Can_Manager_PduHandler7 	Can_Manager_c.obj 
-  00000f06 000062 00003f06 00001696  2 CanManager_SendMessage_12p5ms 	Can_Manager_c.obj 
-  00000f68 000044 00003f68 000016f8  2 CanManager_SendMessage_25ms 	Can_Manager_c.obj 
-  00000fac 000018 00003fac 0000173c  2 CanManager_SendMessage_100ms 	Can_Manager_c.obj 
-  00000fc4 000000 00003fc4 00001754  1 .text.100 	Can_Manager_c.obj 
-  00000fc4 001086 00003fc4 00001754  1 .text 	Can_c.obj 
-  00000fc4 00013e 00003fc4 00001754  2 CAN_SendFrameInt 	Can_c.obj 
-  00001102 0002a2 00004102 00001892  2 CANB_Isr 	Can_c.obj 
-  000013a4 000110 000043a4 00001b34  2 CAN_IO_Config 	Can_c.obj 
-  000014b4 000978 000044b4 00001c44  2 CAN_Initialization 	Can_c.obj 
-  00001e2c 00003c 00004e2c 000025bc  2 CAN_SendFrame 	Can_c.obj 
-  00001e68 0001e2 00004e68 000025f8  2 CAN_ReceiveFrame 	Can_c.obj 
+  00000a90 000080 00003a90 00001220  2 vfnGPIO_LED_Init 	GPIO_c.obj 
+  00000b10 0000ac 00003b10 000012a0  2 GPIO_config 	GPIO_c.obj 
+  00000bbc 000000 00003bbc 0000134c  1 .text.58 	GPIO_c.obj 
+  00000bbc 00000e 00003bbc 0000134c  1 .text 	Exceptions_c.obj 
+  00000bbc 00000e 00003bbc 0000134c  2 EXCEP_InitExceptionHandlers 	Exceptions_c.obj 
+  00000bca 0005ae 00003bca 0000135a  1 .text 	Can_Manager_c.obj 
+  00000bca 000064 00003bca 0000135a  2 Veh_Speed 	Can_Manager_c.obj 
+  00000c2e 000046 00003c2e 000013be  2 Odometer 	Can_Manager_c.obj 
+  00000c74 00005a 00003c74 00001404  2 Fuel_Tank 	Can_Manager_c.obj 
+  00000cce 000060 00003cce 0000145e  2 Door_Status_Indicator 	Can_Manager_c.obj 
+  00000d2e 000032 00003d2e 000014be  2 Seatbelt_Indicator 	Can_Manager_c.obj 
+  00000d60 00002c 00003d60 000014f0  2 Ignition_Status 	Can_Manager_c.obj 
+  00000d8c 00002c 00003d8c 0000151c  2 Control_Shift 	Can_Manager_c.obj 
+  00000db8 000046 00003db8 00001548  2 Directionals 	Can_Manager_c.obj 
+  00000dfe 000046 00003dfe 0000158e  2 Temp_high 	Can_Manager_c.obj 
+  00000e44 000046 00003e44 000015d4  2 Gas_low 	Can_Manager_c.obj 
+  00000e8a 000046 00003e8a 0000161a  2 Oil_low 	Can_Manager_c.obj 
+  00000ed0 000046 00003ed0 00001660  2 High_beams 	Can_Manager_c.obj 
+  00000f16 000046 00003f16 000016a6  2 Hand_break 	Can_Manager_c.obj 
+  00000f5c 000046 00003f5c 000016ec  2 Battery_low 	Can_Manager_c.obj 
+  00000fa2 000046 00003fa2 00001732  2 Door_open 	Can_Manager_c.obj 
+  00000fe8 000046 00003fe8 00001778  2 Seatbelt 	Can_Manager_c.obj 
+  0000102e 000046 0000402e 000017be  2 Direction_left 	Can_Manager_c.obj 
+  00001074 000046 00004074 00001804  2 Direction_right 	Can_Manager_c.obj 
+  000010ba 000062 000040ba 0000184a  2 CanManager_SendMessage_12p5ms 	Can_Manager_c.obj 
+  0000111c 000044 0000411c 000018ac  2 CanManager_SendMessage_25ms 	Can_Manager_c.obj 
+  00001160 000018 00004160 000018f0  2 CanManager_SendMessage_100ms 	Can_Manager_c.obj 
+  00001178 000000 00004178 00001908  1 .text.194 	Can_Manager_c.obj 
+  00001178 001086 00004178 00001908  1 .text 	Can_c.obj 
+  00001178 00013e 00004178 00001908  2 CAN_SendFrameInt 	Can_c.obj 
+  000012b6 0002a2 000042b6 00001a46  2 CANB_Isr 	Can_c.obj 
+  00001558 000110 00004558 00001ce8  2 CAN_IO_Config 	Can_c.obj 
+  00001668 000978 00004668 00001df8  2 CAN_Initialization 	Can_c.obj 
+  00001fe0 00003c 00004fe0 00002770  2 CAN_SendFrame 	Can_c.obj 
+  0000201c 0001e2 0000501c 000027ac  2 CAN_ReceiveFrame 	Can_c.obj 
   UNUSED   000170 ........ ........    CAN_Stop Can_c.obj 
-  0000204a 000000 0000504a 000027da  1 .text.256 	Can_c.obj 
-  0000204a 000040 0000504a 000027da  1 .text 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  000021fe 000000 000051fe 0000298e  1 .text.256 	Can_c.obj 
+  000021fe 000040 000051fe 0000298e  1 .text 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
   UNUSED   00002c ........ ........    abort libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
   UNUSED   000004 ........ ........    atexit libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  0000204a 000040 0000504a 000027da  2 exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  000021fe 000040 000051fe 0000298e  2 exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
   UNUSED   00002a ........ ........    __atexit libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
   UNUSED   000056 ........ ........    __exit libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  0000208a 000000 0000508a 0000281a  1 .text.86 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  0000208a 000032 0000508a 0000281a  1 .text 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
+  0000223e 000000 0000523e 000029ce  1 .text.86 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  0000223e 000032 0000523e 000029ce  1 .text 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
   UNUSED   000010 ........ ........    __register_global_object librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
-  0000208a 000032 0000508a 0000281a  2 __destroy_global_chain 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
+  0000223e 000032 0000523e 000029ce  2 __destroy_global_chain 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
   UNUSED   00003a ........ ........    __register_atexit librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
-  000020bc 000000 000050bc 0000284c  1 .text.104 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
-  000020bc 000008 000050bc 0000284c  1 .text 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
+  00002270 000000 00005270 00002a00  1 .text.104 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
+  00002270 000008 00005270 00002a00  1 .text 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   00004a ........ ........    __save_gpr librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    _savegpr_14 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    _save32gpr_14 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
@@ -446,7 +489,7 @@ Link map of __startup
   UNUSED   000000 ........ ........    _rest32gpr_30 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    _restgpr_31 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    _rest32gpr_31 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
-  000020bc 000008 000050bc 0000284c  2 __restore_frame_and_exit 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
+  00002270 000008 00005270 00002a00  2 __restore_frame_and_exit 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    __finish_restore_frame_and_exit2 librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   00000a ........ ........    __restore_gpr_31_exit librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   000000 ........ ........    __finish_restore_frame_and_exit librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
@@ -494,18 +537,18 @@ Link map of __startup
   UNUSED   00001a ........ ........    __shl2i librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   00001a ........ ........    __shr2u librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
   UNUSED   00001c ........ ........    __shr2i librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
-  000020c4 000000 000050c4 00002854  1 .text.205 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
+  00002278 000000 00005278 00002a08  1 .text.205 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\runtime.o
 
 
 .rodata section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 00000c 000050c8 00002858  1 .rodata 	__ppc_eabi_init_c.obj 
-  00000000 00000c 000050c8 00002858  4 @23 	__ppc_eabi_init_c.obj 
-  0000000c 000004 000050d8 00002868  8 *fill*
-  00000010 000030 000050d8 00002868  1 .rodata 	SchM_Cfg_c.obj 
-  00000010 000030 000050d8 00002868  8 SchMTaskDescConfig 	SchM_Cfg_c.obj 
+  00000000 00000c 00005278 00002a08  1 .rodata 	__ppc_eabi_init_c.obj 
+  00000000 00000c 00005278 00002a08  4 @23 	__ppc_eabi_init_c.obj 
+  0000000c 000004 00005288 00002a18  8 *fill*
+  00000010 000030 00005288 00002a18  1 .rodata 	SchM_Cfg_c.obj 
+  00000010 000030 00005288 00002a18  8 SchMTaskDescConfig 	SchM_Cfg_c.obj 
 
 
 .ctors section layout
@@ -544,93 +587,104 @@ extabindex section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 0000bc 400003a8 00003000  1 .data 	Can_Cfg_c.obj 
+  00000000 00013c 400003a8 00003000  1 .data 	Can_Cfg_c.obj 
   00000000 000010 400003a8 00003000  8 bios_cnf_can_baudrate_options 	Can_Cfg_c.obj 
-  00000010 0000a0 400003b8 00003010  8 bios_cnf_can_messages 	Can_Cfg_c.obj 
-  000000b0 00000c 40000458 000030b0  4 bios_cnf_can_dev 	Can_Cfg_c.obj 
+  00000010 000120 400003b8 00003010  8 bios_cnf_can_messages 	Can_Cfg_c.obj 
+  00000130 00000c 400004d8 00003130  4 bios_cnf_can_dev 	Can_Cfg_c.obj 
 
 
 .sdata section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000050 40000468 000030c0  1 .sdata 	Can_Manager_c.obj 
-  00000000 000008 40000468 000030c0  8 dummy_msg0 	Can_Manager_c.obj 
-  00000008 000008 40000470 000030c8  8 dummy_msg1 	Can_Manager_c.obj 
-  00000010 000008 40000478 000030d0  8 dummy_msg2 	Can_Manager_c.obj 
-  00000018 000008 40000480 000030d8  8 dummy_msg9 	Can_Manager_c.obj 
-  00000020 000008 40000488 000030e0  8 pdu_handler4 	Can_Manager_c.obj 
-  00000028 000008 40000490 000030e8  8 pdu_handler5 	Can_Manager_c.obj 
-  00000030 000008 40000498 000030f0  8 pdu_handler6 	Can_Manager_c.obj 
-  00000038 000008 400004a0 000030f8  8 pdu_handler7 	Can_Manager_c.obj 
-  00000040 000008 400004a8 00003100  8 pdu_handler8 	Can_Manager_c.obj 
-  00000048 000008 400004b0 00003108  8 pdu_handler9 	Can_Manager_c.obj 
-  00000050 000008 400004b8 00003110  1 .sdata 	Can_Cfg_c.obj 
-  00000050 000008 400004b8 00003110  8 can_driver_config 	Can_Cfg_c.obj 
+  00000000 000050 400004e8 00003140  1 .sdata 	Can_Manager_c.obj 
+  00000000 000008 400004e8 00003140  8 dummy_msg0 	Can_Manager_c.obj 
+  00000008 000008 400004f0 00003148  8 dummy_msg1 	Can_Manager_c.obj 
+  00000010 000008 400004f8 00003150  8 dummy_msg2 	Can_Manager_c.obj 
+  00000018 000008 40000500 00003158  8 dummy_msg9 	Can_Manager_c.obj 
+  00000020 000008 40000508 00003160  8 pdu_handler4 	Can_Manager_c.obj 
+  00000028 000008 40000510 00003168  8 pdu_handler5 	Can_Manager_c.obj 
+  00000030 000008 40000518 00003170  8 pdu_handler6 	Can_Manager_c.obj 
+  00000038 000008 40000520 00003178  8 pdu_handler7 	Can_Manager_c.obj 
+  00000040 000008 40000528 00003180  8 pdu_handler8 	Can_Manager_c.obj 
+  00000048 000008 40000530 00003188  8 pdu_handler9 	Can_Manager_c.obj 
+  00000050 000008 40000538 00003190  1 .sdata 	Can_Cfg_c.obj 
+  00000050 000008 40000538 00003190  8 can_driver_config 	Can_Cfg_c.obj 
 
 
 .sbss section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000002 400004c0 00003118  1 .sbss 	dummy_c.obj 
-  00000000 000002 400004c0 00003118  2 @LOCAL@Test__Fv@rub_U16Counter 	dummy_c.obj 
-  00000002 000006 400004c8 00003120  8 *fill*
-  00000008 000002 400004c8 00003120  1 .sbss 	bspimain_c.obj 
-  00000008 000002 400004c8 00003120  2 RecDataMaster 	bspimain_c.obj 
-  0000000a 000006 400004d0 00003128  8 *fill*
-  00000010 00000b 400004d0 00003128  1 .sbss 	SchM_c.obj 
-  00000010 000004 400004d0 00003128  4 SchMConfigGlob 	SchM_c.obj 
-  00000014 000004 400004d4 0000312c  4 SchMTaskControlBlock 	SchM_c.obj 
-  00000018 000003 400004d8 00003130  4 SchMControl 	SchM_c.obj 
-  0000001b 000005 400004e0 00003138  8 *fill*
-  00000020 000008 400004e0 00003138  1 .sbss 	MemAlloc_c.obj 
-  00000020 000004 400004e0 00003138  4 pool_end 	MemAlloc_c.obj 
-  00000024 000004 400004e4 0000313c  4 pool_start 	MemAlloc_c.obj 
-  00000028 000011 400004e8 00003140  1 .sbss 	Can_Manager_c.obj 
-  00000028 000002 400004e8 00003140  4 dummy_msg8 	Can_Manager_c.obj 
+  00000000 000002 40000540 00003198  1 .sbss 	dummy_c.obj 
+  00000000 000002 40000540 00003198  2 @LOCAL@Test__Fv@rub_U16Counter 	dummy_c.obj 
+  00000002 000006 40000548 000031a0  8 *fill*
+  00000008 000002 40000548 000031a0  1 .sbss 	bspimain_c.obj 
+  00000008 000002 40000548 000031a0  2 RecDataMaster 	bspimain_c.obj 
+  0000000a 000006 40000550 000031a8  8 *fill*
+  00000010 00000b 40000550 000031a8  1 .sbss 	SchM_c.obj 
+  00000010 000004 40000550 000031a8  4 SchMConfigGlob 	SchM_c.obj 
+  00000014 000004 40000554 000031ac  4 SchMTaskControlBlock 	SchM_c.obj 
+  00000018 000003 40000558 000031b0  4 SchMControl 	SchM_c.obj 
+  0000001b 000005 40000560 000031b8  8 *fill*
+  00000020 000008 40000560 000031b8  1 .sbss 	MemAlloc_c.obj 
+  00000020 000004 40000560 000031b8  4 pool_end 	MemAlloc_c.obj 
+  00000024 000004 40000564 000031bc  4 pool_start 	MemAlloc_c.obj 
+  00000028 00001c 40000568 000031c0  1 .sbss 	Can_Manager_c.obj 
+  00000028 000002 40000568 000031c0  4 dummy_msg8 	Can_Manager_c.obj 
   UNUSED   000004 ........ ........    PduHandlerCnt0 Can_Manager_c.obj 
   UNUSED   000004 ........ ........    PduHandlerCnt6 Can_Manager_c.obj 
   UNUSED   000002 ........ ........    pdu_handler8_cnt Can_Manager_c.obj 
-  0000002a 000001 400004ea 00003142  1 msg_rx_pdu0 	Can_Manager_c.obj 
-  0000002b 000001 400004eb 00003143  1 msg_rx_pdu7 	Can_Manager_c.obj 
-  0000002c 000001 400004ec 00003144  1 Gearbox_Status 	Can_Manager_c.obj 
-  0000002d 000001 400004ed 00003145  1 Ign_Status 	Can_Manager_c.obj 
-  0000002e 000001 400004ee 00003146  1 Seatbelt_Status 	Can_Manager_c.obj 
-  0000002f 000001 400004ef 00003147  1 HandBrake_Status 	Can_Manager_c.obj 
-  00000030 000001 400004f0 00003148  1 High_Beams_Status 	Can_Manager_c.obj 
-  00000031 000001 400004f1 00003149  1 Door_Status 	Can_Manager_c.obj 
-  00000032 000001 400004f2 0000314a  1 GAS_Status 	Can_Manager_c.obj 
-  00000033 000001 400004f3 0000314b  1 TNK_LSB 	Can_Manager_c.obj 
-  00000034 000001 400004f4 0000314c  1 TNK_MSB 	Can_Manager_c.obj 
-  00000035 000001 400004f5 0000314d  1 Odometer_Value 	Can_Manager_c.obj 
-  00000036 000001 400004f6 0000314e  1 Increase_ACK 	Can_Manager_c.obj 
-  00000037 000001 400004f7 0000314f  1 acteng_lsb 	Can_Manager_c.obj 
-  00000038 000001 400004f8 00003150  1 acteng_msb 	Can_Manager_c.obj 
-  00000039 000007 40000500 00003158  8 *fill*
-  00000040 000020 40000500 00003158  1 .sbss 	Can_c.obj 
-  00000040 000004 40000500 00003158  4 bios_can_prevent_clear_flag_low 	Can_c.obj 
-  00000044 000004 40000504 0000315c  4 bios_can_prevent_clear_flag_high 	Can_c.obj 
-  00000048 000004 40000508 00003160  4 can_config_ptr 	Can_c.obj 
-  00000050 000008 40000510 00003168  8 can_config_dev_ptr 	Can_c.obj 
-  00000058 000008 40000518 00003170  8 bios_cnf_can_eng 	Can_c.obj 
-  00000060 000008 40000520 00003178  1 .sbss 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  0000002a 000001 4000056a 000031c2  1 msg_rx_pdu0 	Can_Manager_c.obj 
+  0000002b 000001 4000056b 000031c3  1 msg_rx_pdu7 	Can_Manager_c.obj 
+  0000002c 000001 4000056c 000031c4  1 Direction_right_Status 	Can_Manager_c.obj 
+  0000002d 000001 4000056d 000031c5  1 Direction_left_Status 	Can_Manager_c.obj 
+  0000002e 000001 4000056e 000031c6  1 Seatbeltn_Status 	Can_Manager_c.obj 
+  0000002f 000001 4000056f 000031c7  1 Door_open_Status 	Can_Manager_c.obj 
+  00000030 000001 40000570 000031c8  1 Battery_low_Status 	Can_Manager_c.obj 
+  00000031 000001 40000571 000031c9  1 Hand_break_Status 	Can_Manager_c.obj 
+  00000032 000001 40000572 000031ca  1 High_beams_Status 	Can_Manager_c.obj 
+  00000033 000001 40000573 000031cb  1 Oil_low_Status 	Can_Manager_c.obj 
+  00000034 000001 40000574 000031cc  1 Gas_low_Status 	Can_Manager_c.obj 
+  00000035 000001 40000575 000031cd  1 Temp_high_Status 	Can_Manager_c.obj 
+  00000036 000001 40000576 000031ce  1 Directional_Status 	Can_Manager_c.obj 
+  00000037 000001 40000577 000031cf  1 Gearbox_Status 	Can_Manager_c.obj 
+  00000038 000001 40000578 000031d0  1 Ign_Status 	Can_Manager_c.obj 
+  00000039 000001 40000579 000031d1  1 Seatbelt_Status 	Can_Manager_c.obj 
+  0000003a 000001 4000057a 000031d2  1 HandBrake_Status 	Can_Manager_c.obj 
+  0000003b 000001 4000057b 000031d3  1 High_Beams_Status 	Can_Manager_c.obj 
+  0000003c 000001 4000057c 000031d4  1 Door_Status 	Can_Manager_c.obj 
+  0000003d 000001 4000057d 000031d5  1 GAS_Status 	Can_Manager_c.obj 
+  0000003e 000001 4000057e 000031d6  1 TNK_LSB 	Can_Manager_c.obj 
+  0000003f 000001 4000057f 000031d7  1 TNK_MSB 	Can_Manager_c.obj 
+  00000040 000001 40000580 000031d8  1 Odometer_Value 	Can_Manager_c.obj 
+  00000041 000001 40000581 000031d9  1 Increase_ACK 	Can_Manager_c.obj 
+  00000042 000001 40000582 000031da  1 acteng_lsb 	Can_Manager_c.obj 
+  00000043 000001 40000583 000031db  1 acteng_msb 	Can_Manager_c.obj 
+  00000044 000004 40000588 000031e0  8 *fill*
+  00000048 000020 40000588 000031e0  1 .sbss 	Can_c.obj 
+  00000048 000004 40000588 000031e0  4 bios_can_prevent_clear_flag_low 	Can_c.obj 
+  0000004c 000004 4000058c 000031e4  4 bios_can_prevent_clear_flag_high 	Can_c.obj 
+  00000050 000004 40000590 000031e8  4 can_config_ptr 	Can_c.obj 
+  00000058 000008 40000598 000031f0  8 can_config_dev_ptr 	Can_c.obj 
+  00000060 000008 400005a0 000031f8  8 bios_cnf_can_eng 	Can_c.obj 
+  00000068 000008 400005a8 00003200  1 .sbss 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
   UNUSED   000004 ........ ........    __atexit_curr_func_C libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  00000060 000004 40000520 00003178  4 __stdio_exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  00000064 000004 40000524 0000317c  4 __console_exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
-  00000068 000004 40000528 00003180  1 .sbss 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
+  00000068 000004 400005a8 00003200  4 __stdio_exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  0000006c 000004 400005ac 00003204  4 __console_exit 	libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
+  00000070 000004 400005b0 00003208  1 .sbss 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
   UNUSED   000004 ........ ........    atexit_curr_func librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
-  00000068 000004 40000528 00003180  4 __global_destructor_chain 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
+  00000070 000004 400005b0 00003208  4 __global_destructor_chain 	librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\global_destructor_chain.o
 
 
 .sdata2 section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000008 40000530 00003118  1 .sdata2 	SchM_Cfg_c.obj 
-  00000000 000008 40000530 00003118  8 SchMConfig 	SchM_Cfg_c.obj 
-  00000008 000008 40000538 00003120  1 .sdata2 	MemAlloc_Cfg_c.obj 
-  00000008 000008 40000538 00003120  8 MemAllocConfig 	MemAlloc_Cfg_c.obj 
+  00000000 000008 400005b8 00003198  1 .sdata2 	SchM_Cfg_c.obj 
+  00000000 000008 400005b8 00003198  8 SchMConfig 	SchM_Cfg_c.obj 
+  00000008 000008 400005c0 000031a0  1 .sdata2 	MemAlloc_Cfg_c.obj 
+  00000008 000008 400005c0 000031a0  8 MemAllocConfig 	MemAlloc_Cfg_c.obj 
 
 
 .sbss2 section layout
@@ -643,21 +697,33 @@ extabindex section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000020 40000540 00003128  1 .bss 	PIT_c.obj 
-  00000000 000020 40000540 00003128  8 PIT_Callback 	PIT_c.obj 
-  00000020 0000a0 40000560 00003148  1 .bss 	Can_Manager_c.obj 
-  00000020 000014 40000560 00003148  4 CanMessage_PduHandler2 	Can_Manager_c.obj 
+  00000000 000020 400005c8 000031a8  1 .bss 	PIT_c.obj 
+  00000000 000020 400005c8 000031a8  8 PIT_Callback 	PIT_c.obj 
+  00000020 000190 400005e8 000031c8  1 .bss 	Can_Manager_c.obj 
+  00000020 000014 400005e8 000031c8  4 CanMessage_PduHandler2 	Can_Manager_c.obj 
   UNUSED   000014 ........ ........    CanMessage_PduHandler7 Can_Manager_c.obj 
-  00000034 000014 40000574 0000315c  4 Gearbox_Message 	Can_Manager_c.obj 
-  00000048 000014 40000588 00003170  4 Ign_Message 	Can_Manager_c.obj 
-  0000005c 000014 4000059c 00003184  4 Seatbelt_Message 	Can_Manager_c.obj 
-  00000070 000014 400005b0 00003198  4 Indicators_Message 	Can_Manager_c.obj 
-  00000084 000014 400005c4 000031ac  4 Can_Fuel_Message 	Can_Manager_c.obj 
-  00000098 000014 400005d8 000031c0  4 Can_Odo_Message 	Can_Manager_c.obj 
-  000000ac 000014 400005ec 000031d4  4 Can_Vel_Message 	Can_Manager_c.obj 
-  000000c0 000a00 40000600 000031e8  1 .bss 	Can_c.obj 
-  000000c0 000500 40000600 000031e8  8 txd_messages 	Can_c.obj 
-  000005c0 000500 40000b00 000036e8  8 received_messages 	Can_c.obj 
+  00000034 000014 400005fc 000031dc  4 Direction_right_Message 	Can_Manager_c.obj 
+  00000048 000014 40000610 000031f0  4 Direction_left_Message 	Can_Manager_c.obj 
+  0000005c 000014 40000624 00003204  4 Seatbeltn_Message 	Can_Manager_c.obj 
+  00000070 000014 40000638 00003218  4 Door_open_Message 	Can_Manager_c.obj 
+  00000084 000014 4000064c 0000322c  4 Battery_low_Message 	Can_Manager_c.obj 
+  00000098 000014 40000660 00003240  4 Hand_break_Message 	Can_Manager_c.obj 
+  000000ac 000014 40000674 00003254  4 High_beams_Message 	Can_Manager_c.obj 
+  000000c0 000014 40000688 00003268  4 Gas_low_Message 	Can_Manager_c.obj 
+  000000d4 000014 4000069c 0000327c  4 Oil_low_Message 	Can_Manager_c.obj 
+  000000e8 000014 400006b0 00003290  4 Gal_low_Message 	Can_Manager_c.obj 
+  000000fc 000014 400006c4 000032a4  4 Temp_high_Message 	Can_Manager_c.obj 
+  00000110 000014 400006d8 000032b8  4 Directional_Message 	Can_Manager_c.obj 
+  00000124 000014 400006ec 000032cc  4 Gearbox_Message 	Can_Manager_c.obj 
+  00000138 000014 40000700 000032e0  4 Ign_Message 	Can_Manager_c.obj 
+  0000014c 000014 40000714 000032f4  4 Seatbelt_Message 	Can_Manager_c.obj 
+  00000160 000014 40000728 00003308  4 Indicators_Message 	Can_Manager_c.obj 
+  00000174 000014 4000073c 0000331c  4 Can_Fuel_Message 	Can_Manager_c.obj 
+  00000188 000014 40000750 00003330  4 Can_Odo_Message 	Can_Manager_c.obj 
+  0000019c 000014 40000764 00003344  4 Can_Vel_Message 	Can_Manager_c.obj 
+  000001b0 000a00 40000778 00003358  1 .bss 	Can_c.obj 
+  000001b0 000500 40000778 00003358  8 txd_messages 	Can_c.obj 
+  000006b0 000500 40000c78 00003858  8 received_messages 	Can_c.obj 
 
 
 Memory map:
@@ -669,25 +735,25 @@ Memory map:
     .ivor_branch_table 00001000 000000f4 000005e0 00001000 00001000         39
   .intc_hw_branch_table 000010f4 00000000 00000800 000010f4 000010f4          0
   .__exception_handlers 00001100 000000a4 000006e0 00001100 00001100         52
-             .text_vle 00003000 000020c4 00000790 00003000 00003000         61
-               .rodata 000050c8 00000040 00002858 000050c8 000050c8        481
-                .ctors 00005108 00000000 00002898 00005108 00005108          0
-                .dtors 00005108 00000000 00002898 00005108 00005108          0
-                 extab 00005108 00000000 00002898 00005108 00005108          0
-            extabindex 00005108 00000000 00002898 00005108 00005108          0
+             .text_vle 00003000 00002278 00000790 00003000 00003000         61
+               .rodata 00005278 00000040 00002a08 00005278 00005278        503
+                .ctors 000052b8 00000000 00002a48 000052b8 000052b8          0
+                .dtors 000052b8 00000000 00002a48 000052b8 000052b8          0
+                 extab 000052b8 00000000 00002a48 000052b8 000052b8          0
+            extabindex 000052b8 00000000 00002a48 000052b8 000052b8          0
   .__uninitialized_intc_handlertable 40000000 000003a4 00003000 00005800 00005800          0
-                 .data 400003a8 000000bc 00003000 00005800 00005800        485
-                .sdata 40000468 00000058 000030c0 000058c0 000058c0        495
-                 .sbss 400004c0 0000006c 00003118 00005918 00005918          0
-               .sdata2 40000530 00000010 00003118 00005918 00005918        500
-                .sbss2 40000540 00000000 00003128 00005928 00005928          0
-                  .bss 40000540 00000ac0 00003128 00005928 00005928          0
-      .PPC.EMB.apuinfo 0000d68c 00000000 000107c0 00012fb4 00012fb4          0
-         .debug_abbrev          0000017b 00003128
-           .debug_info          000055ea 000032a3
-           .debug_line          00004f31 0000888d
-            .debug_loc          0000078f 0000d7be
-       .debug_pubnames          00000c3e 0000df4d
+                 .data 400003a8 0000013c 00003000 00005800 00005800        507
+                .sdata 400004e8 00000058 00003140 00005940 00005940        523
+                 .sbss 40000540 00000074 00003198 00005998 00005998          0
+               .sdata2 400005b8 00000010 00003198 00005998 00005998        528
+                .sbss2 400005c8 00000000 000031a8 000059a8 000059a8          0
+                  .bss 400005c8 00000bb0 000031a8 000059a8 000059a8          0
+      .PPC.EMB.apuinfo 0000e524 00000000 000116d0 00013ecc 00013ecc          0
+         .debug_abbrev          0000017b 000031a8
+           .debug_info          00005c67 00003323
+           .debug_line          00004fdc 00008f8a
+            .debug_loc          0000084d 0000df66
+       .debug_pubnames          00000ed0 0000e7b3
 
 
 Linker generated symbols:
@@ -719,49 +785,49 @@ _f___exception_handlers_rom 00001100
                   _e_text 00003000
               _f_text_vle 00003000
           _f_text_vle_rom 00003000
-              _e_text_vle 000050c4
-                _f_rodata 000050c8
-            _f_rodata_rom 000050c8
-                _e_rodata 00005108
-                 _f_ctors 00005108
-             _f_ctors_rom 00005108
-                 _e_ctors 00005108
-                 _f_dtors 00005108
-             _f_dtors_rom 00005108
-                 _e_dtors 00005108
-                  _fextab 00005108
-              _fextab_rom 00005108
-                  _eextab 00005108
-             _fextabindex 00005108
-         _fextabindex_rom 00005108
-             _eextabindex 00005108
+              _e_text_vle 00005278
+                _f_rodata 00005278
+            _f_rodata_rom 00005278
+                _e_rodata 000052b8
+                 _f_ctors 000052b8
+             _f_ctors_rom 000052b8
+                 _e_ctors 000052b8
+                 _f_dtors 000052b8
+             _f_dtors_rom 000052b8
+                 _e_dtors 000052b8
+                  _fextab 000052b8
+              _fextab_rom 000052b8
+                  _eextab 000052b8
+             _fextabindex 000052b8
+         _fextabindex_rom 000052b8
+             _eextabindex 000052b8
 _f___uninitialized_intc_handlertable 40000000
 _e___uninitialized_intc_handlertable 400003a4
                   _f_data 400003a8
               _f_data_rom 00005800
-                  _e_data 40000464
-                 _f_sdata 40000468
-             _f_sdata_rom 000058c0
-                 _e_sdata 400004c0
-                  _f_sbss 400004c0
-                  _e_sbss 4000052c
-                _f_sdata2 40000530
-            _f_sdata2_rom 00005918
-                _e_sdata2 40000540
-                 _f_sbss2 40000540
-                 _e_sbss2 40000540
-                   _f_bss 40000540
-                   _e_bss 40001000
+                  _e_data 400004e4
+                 _f_sdata 400004e8
+             _f_sdata_rom 00005940
+                 _e_sdata 40000540
+                  _f_sbss 40000540
+                  _e_sbss 400005b4
+                _f_sdata2 400005b8
+            _f_sdata2_rom 00005998
+                _e_sdata2 400005c8
+                 _f_sbss2 400005c8
+                 _e_sbss2 400005c8
+                   _f_bss 400005c8
+                   _e_bss 40001178
               _stack_addr 40014000
                _stack_end 40013000
                _heap_addr 40012000
                 _heap_end 40013000
-             _nbfunctions 00000049
+             _nbfunctions 00000053
            SIZEOF_HEADERS 00000320
-               _SDA_BASE_ 40008468
-              _SDA2_BASE_ 40008530
-           _ABS_SDA_BASE_ 40008468
-          _ABS_SDA2_BASE_ 40008530
+               _SDA_BASE_ 400084e8
+              _SDA2_BASE_ 400085b8
+           _ABS_SDA_BASE_ 400084e8
+          _ABS_SDA2_BASE_ 400085b8
                  _SP_INIT 40014000
              __HEAP_START 40012000
               __mem_limit 40013000

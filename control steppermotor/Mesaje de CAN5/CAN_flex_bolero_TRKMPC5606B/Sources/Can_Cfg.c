@@ -58,9 +58,17 @@ CAN_ConfigMsgType bios_cnf_can_messages[] = {
 	{ 4, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x601,         0x1F12,     Seatbelt_Indicator  },
 	{ 5, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x302,         0x1F13,          Ignition_Status},
 	{ 6, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x307,         0x1F14,          Control_Shift  },
-	{ 7, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x123456AA,    0x1FFFFFF8, Can_Manager_PduHandler7  },
-	{ 8, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x1CF,         0x1FFFFFFF, NULL  },
-	{ 9, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x1A654321,    0x1FFFFFFF, NULL  }
+	{ 7, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x308,         0x1F14,             Directionals},
+	{ 8, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x309,         0x1F15,                Temp_high},
+	{ 9, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x310,    0x1F16,                  Gas_low},
+	{ 10, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x311,    0x1F17,                 Oil_low},
+	{ 11, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x312,    0x1F18,              High_beams},
+	{ 12, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x313,    0x1F19,             Hand_break },
+	{ 13, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x314,    0x1F20,             Battery_low},
+	{ 14, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x315,    0x1F21,               Door_open},
+	{ 15, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x316,    0x1F22,                Seatbelt},
+	{ 16, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x317,    0x1F23,         Direction_left},
+	{ 17, CNF_CAN_CH_RX, CNF_CAN_DATA_FRAME, CNF_CAN_IDE_STD, 0x318,    0x1F24,          Direction_right}
 };
 
 /*~E*/
